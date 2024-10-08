@@ -1,0 +1,488 @@
+/* GENERAL */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+p{
+    color: rgb(85,85,85);
+}
+
+/* Transitions */
+
+a, .btn{
+    transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+nav, .nav-links{
+    display: flex;
+
+}
+
+nav{
+    justify-content: space-around;
+    align-items:center;
+    height: 17vh;
+}
+.nav-links{
+    gap:2rem;
+    list-style: none;
+    font-size: 1.5rem;
+
+}
+
+a{
+color: black;
+text-decoration: none;
+text-underline-offset: 1rem;
+}
+
+a:hover{
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181,181,181);
+}
+
+.logo{
+    font-size: 2rem;
+
+}
+
+.logo:hover{
+    cursor:default
+}
+
+/* HAMBURGER MENU */
+#hamburger-nav {
+    display: none;
+  }
+  
+  .hamburger-menu {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+  }
+  
+  .hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+  }
+  
+  .menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+  }
+  .menu-links a{
+    display: block;
+    padding: 10px;
+    text-align:center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition:all 0.3 ease-in-out;
+  }
+
+  .menu-links li{
+    list-style: none;
+  }
+  .menu-links.open{
+    max-height:300px ;
+  }
+  .hamburger-icon span:first-child{
+    transform: rotate(45deg) translate(10px,5px);
+  }
+  .hamburger-icon span:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger-icon span:last-child{
+    transform: rotate(-45deg) translate(10px,-5px);
+  }
+  .hamburger-icon span:first-child{
+    transform: none;
+  }
+   
+  .hamburger-icon span:first-child{
+    transform: none;
+  }
+   
+  .hamburger-icon span:first-child{
+    transform: none;
+  }
+   
+  /* SECTIONS */
+
+ 
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socials-containers {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 300ms ease;
+  padding: 0.75rem 1.5rem;
+  min-width: 6rem;
+  border-radius: 2rem;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* Solid button for 'Contact Info' */
+.btn-color-1 {
+  background-color: rgb(53, 53, 53); /* Dark background */
+  color: white; /* Light text */
+  border: none;
+}
+
+.btn-color-1:hover {
+  color: white;
+  background-color: rgb(0, 0, 0); /* Slightly darker on hover */
+}
+
+/* Outline button for 'Download CV' */
+.btn-color-2 {
+  background: none; /* No background */
+  color: rgb(7, 6, 6); /* Dark text */
+  border: 0.1rem solid rgb(53, 53, 53); /* Dark border */
+}
+
+.btn-color-2:hover {
+  background-color: rgb(53, 53, 53); /* Dark background on hover */
+  color: white; /* Light text on hover */
+}
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+   
+  padding-left: 0px;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  flex: 2;
+  background: white;
+  border-radius: 3rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+  padding: 1.5rem 2rem;
+  margin-bottom: -70px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  height: auto;
+}
+
+.details-container h3 {
+  margin-bottom: 0.5rem;
+}
+
+.details-container p {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+
+
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section__pic-container {
+  margin-right: 40px;
+}
+
+/* EXPERIENCE SECTION */
+
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+.text-container {
+  padding: 1.5rem;
+  margin: 2rem 0;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.text-container p {
+  margin-bottom: 1rem;
+}
+
+
+/* PROJECTS SECTION */
+
+#projects {
+  position: relative;
+}
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+
+/* Theme Toggle Icon */
+.theme-toggle {
+  cursor: pointer;
+  font-size: 1.75rem;
+  color: rgb(53, 53, 53); /* Default color for light mode */
+  transition: color 0.3s ease;
+}
+
+.dark-theme .theme-toggle {
+  color: yellow; /* Color for dark mode */
+}
+
+
+/* Dark Theme */
+.dark-theme {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+.dark-theme nav {
+  background-color: #090909;
+}
+
+.dark-theme .btn {
+  background-color: #444;
+  color: white;
+}
+
+.dark-theme a {
+  color: #f5f5f5;
+}
+
+.dark-theme .details-container {
+  background-color: #2c2c2c;
+  border-color: #444;
+}
+
+.dark-theme .icon {
+  filter: invert(1); /* Invert icons for dark mode */
+}
+
